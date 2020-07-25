@@ -5,14 +5,12 @@
 pkgbase=manjaro-meta
 arch=('i686' 'x86_64')
 pkgname=('manjaro-alsa'
-	 'manjaro-pulse'
+		 'manjaro-pulse'
          'manjaro-gstreamer'
          'manjaro-vaapi'
-         'manjaro-network'
          'manjaro-connman'
          'manjaro-modem'
          'manjaro-bluetooth'
-         'manjaro-printer'
          'manjaro-input'
 )
 
@@ -98,31 +96,6 @@ package_manjaro-vaapi() {
                         "lib32-libva-vdpau-driver")
 }
 
-package_manjaro-network() {
-	pkgdesc="manjaro network support (Meta-PKG)"
-		depends=("networkmanager"
-                        "networkmanager-openconnect"
-                        "networkmanager-openvpn"
-                        "networkmanager-pptp"
-                        "networkmanager-vpnc"
-                        "networkmanager-strongswan"
-                        "network-manager-sstp"
-                        "networkmanager-fortisslvpn"
-                        "networkmanager-dispatcher-sshd"
-                        "networkmanager-dispatcher-ntpd"
-                        "rp-pppoe"
-                        "openresolv"
-                        "openssh"
-                        "avahi"
-                        "nss-mdns"
-                        "dnsmasq"
-                        "wpa_supplicant"
-                        "manjaro-settings-samba")
-	optdepends=('network-manager-applet: Applet for managing network connection'
-                        'nm-tray: A pure QT NetworkManager front-end residing in panels'
-                        'firewalld: Firewall daemon with D-Bus interface')
-}
-
 package_manjaro-connman() {
 	pkgdesc="manjaro connman support (Meta-PKG)"
 		depends=("connman"
@@ -169,30 +142,6 @@ package_manjaro-bluetooth() {
 	optdepends=('blueman: A gtk+ bluetooth manager'
                         'bluedevil: qt bluetooth frontend'
                         'blueberry: bluetooth configuration tool')
-}
-
-package_manjaro-printer() {
-	pkgdesc="manjaro printer support (Meta-PKG)"
-		depends=("cups"
-                        "cups-pdf"
-                        "cups-pk-helper"
-                        "ghostscript"
-                        "gsfonts"
-                        "gutenprint"
-                        "hplip"
-                        "foomatic-db"
-                        "foomatic-db-gutenprint-ppds"
-                        "python-gobject"
-                        "python-pyqt5"
-                        "python-pysmbc"
-                        "python-reportlab"
-                        "splix"
-                        "colord-sane")
-	optdepends=('system-config-printer: A gtk cups printer configuration tool and status applet'
-                        'print-manager: A kde tool for managing print jobs and printers'
-                        'xsane: gtk2 frontend for scanner'
-                        'simple-scan: gtk3 frontend for scanner'
-                        'skanlite: Image Scanning Application for KDE')
 }
 
  package_manjaro-input() {
