@@ -12,6 +12,7 @@ pkgname=('manjaro-alsa'
         'manjaro-modem'
         'manjaro-bluetooth'
         'manjaro-input'
+        'manjaro-pipewire'
 )
 
 pkgver=20210102
@@ -67,7 +68,7 @@ optdepends=('pavucontrol: A GTK volume control tool for PulseAudio'
            'pasystray: pulseaudio system tray'
            'paprefs: configuration dialog for pulseaudio'
            'pulseaudio-ctl: Control PulseAudio volume from the shell or mapped to keyboard shortcuts')
-conflicts=('pipewire-support')
+conflicts=('manjaro-pipewire')
 }
 
 package_manjaro-gstreamer() {
@@ -127,14 +128,14 @@ package_manjaro-modem() {
 
 package_manjaro-bluetooth() {
 	pkgdesc="manjaro bluetooth support (Meta-PKG)"
-		depends=("bluez"
-                        "bluez-libs"
-                        "bluez-cups"
-                        "bluez-hid2hci"
-                        "bluez-plugins"
-                        "bluez-tools"
-                        "bluez-utils"
-                        "pulseaudio-bluetooth")
+	depends=("bluez"
+                "bluez-libs"
+                "bluez-cups"
+                "bluez-hid2hci"
+                "bluez-plugins"
+                "bluez-tools"
+                "bluez-utils"
+                "pulseaudio-bluetooth")
 	optdepends=('blueman: A gtk+ bluetooth manager'
                'bluedevil: qt bluetooth frontend'
                'blueberry: bluetooth configuration tool')
@@ -142,15 +143,15 @@ package_manjaro-bluetooth() {
 
  package_manjaro-input() {
 	pkgdesc="manjaro input support (Meta-PKG)"
-		depends=("xf86-input-elographics"
-                        "xf86-input-evdev"
-                        "xf86-input-void"
-                        "xf86-input-libinput"
-                        "xf86-input-wacom"
-                        "libinput-gestures"
-                        "iio-sensor-proxy"
-                        "fprintd"
-                        "bolt")
+	depends=("xf86-input-elographics"
+                "xf86-input-evdev"
+                "xf86-input-void"
+                "xf86-input-libinput"
+                "xf86-input-wacom"
+                "libinput-gestures"
+                "iio-sensor-proxy"
+                "fprintd"
+                "bolt")
 	optdepends=('gestures: a minimal gtk+ gui for libinput-gesture'
                'easystroke: control your desktop using mouse gesture'
                'piper: GTK application to configure gaming mice'
@@ -158,3 +159,13 @@ package_manjaro-bluetooth() {
                'fingerprint-gui: Application for fingerprint-based authentication, automatically support UPEK fingerprint readers with non-free library'
                'plasma-thunderbolt: plasma integration for managing thunderbolt devices')
 }
+
+package_manjaro-pipewire() {
+pkgdesc="Meta package for pipewire support."
+depends=("pipewire"
+	"pipewire-alsa"
+        "pipewire-pulse"
+        "pipewire-jack"
+        "wireplumber")
+}
+
