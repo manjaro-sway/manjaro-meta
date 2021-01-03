@@ -7,7 +7,6 @@ arch=('i686' 'x86_64')
 pkgname=('manjaro-alsa'
         'manjaro-pulse'
         'manjaro-gstreamer'
-        'manjaro-vaapi'
         'manjaro-connman'
         'manjaro-modem'
         'manjaro-bluetooth'
@@ -61,7 +60,7 @@ package_manjaro-pulse() {
         		"pulseaudio-rtp"
         		"pulseaudio-equalizer"
         		"pulseaudio-bluetooth")
-     fi
+        fi
 optdepends=('pavucontrol: A GTK volume control tool for PulseAudio'
            'pavucontrol-qt: A QT volume control tool for PulseAudio'
            'pulseaudio-equalizer-ladspa: A GUI equalizer for PulseAudio'
@@ -80,17 +79,6 @@ package_manjaro-gstreamer() {
                         "gst-plugins-good"
                         "gst-plugins-ugly"
                         "gst-plugins-espeak")
-}
-
-package_manjaro-vaapi() {
-	pkgdesc="manjaro VA-API support (Meta-PKG)"
-		depends=("libva-intel-driver"
-                        "libva-mesa-driver"
-                        "libva-vdpau-driver"
-                        "intel-media-driver"
-                        "lib32-libva-intel-driver"
-                        "lib32-libva-mesa-driver"
-                        "lib32-libva-vdpau-driver")
 }
 
 package_manjaro-connman() {
