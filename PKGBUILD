@@ -37,10 +37,7 @@ package_manjaro-alsa() {
 			"alsa-firmware"
 			"alsa-lib"
             	        "alsa-plugins"
-            	        "alsa-oss"
-			"lib32-alsa-lib"
-            	        "lib32-alsa-oss"
-			"lib32-alsa-plugins")
+            	        "alsa-oss")
 	fi
 	optdepends=('alsa-tools')
 }
