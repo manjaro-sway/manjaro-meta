@@ -68,89 +68,90 @@ conflicts=('manjaro-pipewire')
 }
 
 package_manjaro-gstreamer() {
-	pkgdesc="manjaro gstreamer support (Meta-PKG)"
-		depends=("ffmpeg"
-                        "gst-libav"
-                        "gst-plugins-bad"
-                        "gst-plugins-base"
-                        "gst-plugins-good"
-                        "gst-plugins-ugly"
-                        "gst-plugins-espeak")
+pkgdesc="manjaro gstreamer support (Meta-PKG)"
+depends=("ffmpeg"
+		"gst-libav"
+		"gst-plugins-bad"
+		"gst-plugins-base"
+		"gst-plugins-good"
+		"gst-plugins-ugly"
+		"gst-plugins-espeak")
 }
 
 package_manjaro-connman() {
-	pkgdesc="manjaro connman support (Meta-PKG)"
-		depends=("connman"
-                        "ofono"
-                        "pacrunner"
-                        "wpa_supplicant"
-                        "rp-pppoe"
-                        "openresolv"
-                        "openssh"
-                        "openconnect"
-                        "openvpn"
-                        "pptpclient"
-                        "avahi"
-                        "nss-mdns"
-                        "dnsmasq"
-                        "ntp"
-                        "manjaro-settings-samba")
-	optdepends=('cmst: A QT gui for connman'
-                   'connman-gtk: a GTK gui for connman'
-                   'qomui: A QT gui for vpn management'
-                   'gufw: a GTK gui for Uncomplicated firewall'
-                   'nx-firewall: kcm module for firewall')
+pkgdesc="manjaro connman support (Meta-PKG)"
+depends=("connman"
+		"ofono"
+		"pacrunner"
+		"wpa_supplicant"
+		"rp-pppoe"
+		"openresolv"
+		"openssh"
+		"openconnect"
+		"openvpn"
+		"pptpclient"
+		"avahi"
+		"nss-mdns"
+		"dnsmasq"
+		"ntp"
+		"manjaro-settings-samba")
+optdepends=('cmst: A QT gui for connman'
+			'connman-gtk: a GTK gui for connman'
+			'qomui: A QT gui for vpn management'
+			'gufw: a GTK gui for Uncomplicated firewall'
+			'nx-firewall: kcm module for firewall')
 }
 
 package_manjaro-modem() {
-	pkgdesc="manjaro modem support (Meta-PKG)"
-		depends=("modemmanager"
-                        "mobile-broadband-provider-info"
-                        "usb_modeswitch")
-	optdepends=('modem-manager-gui: A gui for modem manager'
-                   'gpsd: GPS daemon and library to support USB/serial GPS devices')
+pkgdesc="manjaro modem support (Meta-PKG)"
+depends=("modemmanager"
+		"mobile-broadband-provider-info"
+		"usb_modeswitch")
+optdepends=('modem-manager-gui: A gui for modem manager'
+			'gpsd: GPS daemon and library to support USB/serial GPS devices')
 }
 
 package_manjaro-bluetooth() {
-	pkgdesc="manjaro bluetooth support (Meta-PKG)"
-	depends=("bluez"
-                "bluez-libs"
-                "bluez-cups"
-                "bluez-hid2hci"
-                "bluez-plugins"
-                "bluez-tools"
-                "bluez-utils"
-                "pulseaudio-bluetooth")
-	optdepends=('blueman: A gtk+ bluetooth manager'
-               'bluedevil: qt bluetooth frontend'
-               'blueberry: bluetooth configuration tool')
+pkgdesc="manjaro bluetooth support (Meta-PKG)"
+depends=("bluez"
+		"bluez-libs"
+		"bluez-cups"
+		"bluez-hid2hci"
+		"bluez-plugins"
+		"bluez-tools"
+		"bluez-utils"
+		"pulseaudio-bluetooth")
+optdepends=('blueman: A gtk+ bluetooth manager'
+			'bluedevil: qt bluetooth frontend'
+			'blueberry: bluetooth configuration tool')
 }
 
  package_manjaro-input() {
-	pkgdesc="manjaro input support (Meta-PKG)"
-	depends=("xf86-input-elographics"
-                "xf86-input-evdev"
-                "xf86-input-void"
-                "xf86-input-libinput"
-                "xf86-input-wacom"
-                "libinput-gestures"
-                "iio-sensor-proxy"
-                "fprintd"
-                "bolt")
-	optdepends=('gestures: a minimal gtk+ gui for libinput-gesture'
-               'easystroke: control your desktop using mouse gesture'
-               'piper: GTK application to configure gaming mice'
-               'fancontrol-gui: Gui for fancontrol'
-               'fingerprint-gui: Application for fingerprint-based authentication, automatically support UPEK fingerprint readers with non-free library'
-               'plasma-thunderbolt: plasma integration for managing thunderbolt devices')
+pkgdesc="manjaro input support (Meta-PKG)"
+depends=("xf86-input-elographics"
+		"xf86-input-evdev"
+		"xf86-input-void"
+		"xf86-input-libinput"
+		"xf86-input-wacom"
+		"libinput-gestures"
+		"iio-sensor-proxy"
+		"fprintd"
+		"bolt")
+optdepends=('gestures: a minimal gtk+ gui for libinput-gesture'
+			'easystroke: control your desktop using mouse gesture'
+			'piper: GTK application to configure gaming mice'
+			'fancontrol-gui: Gui for fancontrol'
+			'fingerprint-gui: Application for fingerprint-based authentication, automatically support UPEK fingerprint readers with non-free library'
+			'plasma-thunderbolt: plasma integration for managing thunderbolt devices')
 }
 
 package_manjaro-pipewire() {
 pkgdesc="Meta package for pipewire support."
 depends=("pipewire"
-	"pipewire-alsa"
-        "pipewire-pulse"
-        "pipewire-jack"
-        "wireplumber")
+		"pipewire-alsa"
+		"pipewire-pulse"
+		"pipewire-jack"
+		"wireplumber")
+conflicts=('manjaro-pulse')
 }
 
