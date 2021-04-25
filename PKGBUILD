@@ -151,7 +151,10 @@ depends=("pipewire"
 		"pipewire-alsa"
 		"pipewire-pulse"
 		"pipewire-jack"
-		"wireplumber")
+		"sof-firmware"
+		"gst-plugin-pipewire")
+optdepends=('wireplumber: Session / policy manager implementation for PipeWire'
+			'realtime-privileges: Realtime privileges for users')
 conflicts=('manjaro-pulse')
 }
 
