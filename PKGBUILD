@@ -14,10 +14,13 @@ pkgname=('manjaro-alsa'
         'manjaro-pipewire'
 )
 
-pkgver=20210102
-pkgrel=1
+pkgver=20210425
+pkgrel=2
 url="www.manjaro.org"
+source=('realtime-privileges.sh' 'realtime-privileges.hook')
 license=('GPL')
+md5sums=('2417dca55acad21b7fdbf46929bf89e7'
+         '393e206c2bc45bbb6a87924c2b8d522e')
 
 pkgver() {
 
@@ -156,5 +159,7 @@ depends=("pipewire"
 optdepends=('wireplumber: Session / policy manager implementation for PipeWire'
 			'realtime-privileges: Realtime privileges for users')
 conflicts=('manjaro-pulse')
-}
 
+	install -Dm644 realtime-privileges.hook $pkgdir/usr/share/libalpm/hooks/realtime-privileges.hook
+	install -Dm755 realtime-privileges.sh $pkgdir/usr/bin/realtime-privileges
+}
