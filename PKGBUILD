@@ -12,7 +12,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20210928
+pkgver=20211001
 pkgrel=1
 arch=('any')
 url="www.manjaro.org"
@@ -111,8 +111,7 @@ package_manjaro-pipewire() {
            'pipewire-alsa'
            'pipewire-jack'
            'pipewire-pulse'
-           'pipewire-zeroconf'
-           'sof-firmware')
+           'pipewire-zeroconf')
   optdepends=('realtime-privileges: Realtime privileges for users'
               'wireplumber: Alternative session / policy manager implementation')
   conflicts=('manjaro-pulse'
@@ -134,8 +133,7 @@ package_manjaro-pulse() {
            'pulseaudio-jack'
            'pulseaudio-lirc'
            'pulseaudio-rtp'
-           'pulseaudio-zeroconf'
-           'sof-firmware')
+           'pulseaudio-zeroconf')
   optdepends=('paprefs: Configuration dialog'
               'pasystray: system tray application'
               'pavucontrol: A GTK volume control tool'
