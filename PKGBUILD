@@ -15,7 +15,7 @@ pkgbase=manjaro-meta
 pkgver=20211001
 pkgrel=1
 arch=('any')
-url="www.manjaro.org"
+url="https://manjaro.org"
 license=('GPL')
 source=('realtime-privileges.sh'
         'realtime-privileges.hook')
