@@ -12,7 +12,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20211001
+pkgver=20220107
 pkgrel=1
 arch=('any')
 url="https://manjaro.org"
@@ -111,9 +111,9 @@ package_manjaro-pipewire() {
            'pipewire-alsa'
            'pipewire-jack'
            'pipewire-pulse'
+           'pipewire-session-manager'
            'pipewire-zeroconf')
-  optdepends=('realtime-privileges: Realtime privileges for users'
-              'wireplumber: Alternative session / policy manager implementation')
+  optdepends=('realtime-privileges: Realtime privileges for users')
   conflicts=('manjaro-pulse'
              'pulseaudio-equalizer'
              'pulseaudio-jack'
