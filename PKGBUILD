@@ -13,7 +13,7 @@ pkgname=('manjaro-alsa'
          )
 pkgbase=manjaro-meta
 pkgver=20220123
-pkgrel=1
+pkgrel=2
 arch=('any')
 url="https://manjaro.org"
 license=('GPL')
@@ -140,8 +140,7 @@ package_manjaro-pulse() {
               'pulseaudio-equalizer: for equalizer sink (qpaeq)'
               'pulseaudio-equalizer-ladspa: A GUI equalizer'
               'pulseaudio-jack: Jack support')
-  conflicts=('lib32-pipewire-jack'
-             'manjaro-pipewire'
+  conflicts=('manjaro-pipewire'
              'pipewire-pulse'
              'pipewire-zeroconf')
 }
