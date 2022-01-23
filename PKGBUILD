@@ -12,7 +12,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20220107
+pkgver=20220123
 pkgrel=1
 arch=('any')
 url="https://manjaro.org"
@@ -109,14 +109,13 @@ package_manjaro-pipewire() {
   depends=('gst-plugin-pipewire'
            'pipewire'
            'pipewire-alsa'
-           'pipewire-jack'
            'pipewire-pulse'
            'pipewire-session-manager'
            'pipewire-zeroconf')
-  optdepends=('realtime-privileges: Realtime privileges for users')
+  optdepends=('pipewire-jack: Jack support'
+              'realtime-privileges: Realtime privileges for users')
   conflicts=('manjaro-pulse'
              'pulseaudio-equalizer'
-             'pulseaudio-jack'
              'pulseaudio-lirc'
              'pulseaudio-rtp'
              'pulseaudio-zeroconf')
@@ -130,7 +129,6 @@ package_manjaro-pulse() {
   depends=('pulseaudio'
            'pulseaudio-alsa'
            'pulseaudio-bluetooth'
-           'pulseaudio-jack'
            'pulseaudio-lirc'
            'pulseaudio-rtp'
            'pulseaudio-zeroconf')
@@ -140,10 +138,10 @@ package_manjaro-pulse() {
               'pavucontrol-qt: A Qt volume control tool'
               'pulseaudio-ctl: Control volume from the shell or mapped to keyboard shortcuts'
               'pulseaudio-equalizer: for equalizer sink (qpaeq)'
-              'pulseaudio-equalizer-ladspa: A GUI equalizer')
+              'pulseaudio-equalizer-ladspa: A GUI equalizer'
+              'pulseaudio-jack: Jack support')
   conflicts=('lib32-pipewire-jack'
              'manjaro-pipewire'
-             'pipewire-jack'
              'pipewire-pulse'
              'pipewire-zeroconf')
 }
