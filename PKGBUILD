@@ -12,8 +12,8 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20220123
-pkgrel=2
+pkgver=20220217
+pkgrel=1
 arch=('any')
 url="https://manjaro.org"
 license=('GPL')
@@ -112,12 +112,14 @@ package_manjaro-pipewire() {
            'pipewire-pulse'
            'pipewire-session-manager'
            'pipewire-zeroconf')
-  optdepends=('pipewire-jack: Jack support'
-              'realtime-privileges: Realtime privileges for users')
+  optdepends=('easyeffects: advanced equalizer and effects'
+              'pipewire-jack: Jack support'
+              'pipewire-v4l2: V4L2 interceptor'
+              'pipewire-x11-bell: X11 bell'
+              'realtime-privileges: Realtime privileges for users'
+              'sof-firmware')
   conflicts=('manjaro-pulse'
-             'pulseaudio-equalizer'
-             'pulseaudio-lirc'
-             'pulseaudio-rtp'
+             'pulseaudio-alsa'
              'pulseaudio-zeroconf')
 
   install -Dm644 realtime-privileges.hook -t "$pkgdir"/usr/share/libalpm/hooks/
@@ -129,18 +131,20 @@ package_manjaro-pulse() {
   depends=('pulseaudio'
            'pulseaudio-alsa'
            'pulseaudio-bluetooth'
-           'pulseaudio-lirc'
-           'pulseaudio-rtp'
            'pulseaudio-zeroconf')
   optdepends=('paprefs: Configuration dialog'
               'pasystray: system tray application'
               'pavucontrol: A GTK volume control tool'
               'pavucontrol-qt: A Qt volume control tool'
               'pulseaudio-ctl: Control volume from the shell or mapped to keyboard shortcuts'
-              'pulseaudio-equalizer: for equalizer sink (qpaeq)'
-              'pulseaudio-equalizer-ladspa: A GUI equalizer'
-              'pulseaudio-jack: Jack support')
+              'pulseaudio-equalizer: Graphical equalizer'
+              'pulseaudio-equalizer-ladspa: A 15-band equalizer'
+              'pulseaudio-jack: Jack support'
+              'pulseaudio-lirc: IR (lirc) support'
+              'pulseaudio-rtp: RTP and RAOP support'
+              'sof-firmware')
   conflicts=('manjaro-pipewire'
+             'pipewire-alsa'
              'pipewire-pulse'
              'pipewire-zeroconf')
 }
