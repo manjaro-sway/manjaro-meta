@@ -13,7 +13,7 @@ pkgname=('manjaro-alsa'
          )
 pkgbase=manjaro-meta
 pkgver=20220217
-pkgrel=1
+pkgrel=2
 arch=('any')
 url="https://manjaro.org"
 license=('GPL')
@@ -119,7 +119,6 @@ package_manjaro-pipewire() {
               'realtime-privileges: Realtime privileges for users'
               'sof-firmware')
   conflicts=('manjaro-pulse'
-             'pulseaudio-alsa'
              'pulseaudio-zeroconf')
 
   install -Dm644 realtime-privileges.hook -t "$pkgdir"/usr/share/libalpm/hooks/
@@ -144,7 +143,6 @@ package_manjaro-pulse() {
               'pulseaudio-rtp: RTP and RAOP support'
               'sof-firmware')
   conflicts=('manjaro-pipewire'
-             'pipewire-alsa'
              'pipewire-pulse'
              'pipewire-zeroconf')
 }
