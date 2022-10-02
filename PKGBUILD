@@ -12,10 +12,9 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20220217
-pkgrel=2
+pkgver=20221002
+pkgrel=1
 arch=('any')
-url="https://manjaro.org"
 license=('GPL')
 source=('realtime-privileges.sh'
         'realtime-privileges.hook')
@@ -28,31 +27,37 @@ pkgver() {
 
 package_manjaro-alsa() {
   pkgdesc="Manjaro meta package for complete ALSA support"
+  url="https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture"
   depends=('alsa-firmware'
            'alsa-lib'
            'alsa-oss'
            'alsa-plugins'
            'alsa-utils')
-  optdepends=('alsa-tools')
+  optdepends=('alsa-tools: Advanced tools for certain sound cards'
+              'pipewire-alsa: PipeWire support'
+              'pulseaudio-alsa: PulseAudio support')
 }
 
 package_manjaro-bluetooth() {
   pkgdesc="Manjaro meta package for complete Bluetooth support"
+  url="https://wiki.archlinux.org/title/Bluetooth"
   depends=('bluez'
            'bluez-cups'
            'bluez-hid2hci'
            'bluez-libs'
            'bluez-plugins'
            'bluez-tools'
-           'bluez-utils'
-           'pulseaudio-bluetooth')
+           'bluez-utils')
   optdepends=('blueberry: Bluetooth configuration tool'
               'bluedevil: Qt Bluetooth frontend'
-              'blueman: A Gtk+ Bluetooth manager')
+              'blueman: A Gtk+ Bluetooth manager'
+              'pipewire-pulse: PipeWire support'
+              'pulseaudio-bluetooth: PulseAudio support')
 }
 
 package_manjaro-connman() {
   pkgdesc="Manjaro meta package for complete ConnMan support"
+  url="https://wiki.archlinux.org/title/ConnMan"
   depends=('avahi'
            'connman'
            'dnsmasq'
@@ -76,6 +81,7 @@ package_manjaro-connman() {
 
 package_manjaro-gstreamer() {
   pkgdesc="Manjaro meta package for complete Gstreamer support"
+  url="https://wiki.archlinux.org/title/GStreamer"
   depends=('ffmpeg'
            'gst-libav'
            'gst-plugins-bad'
@@ -86,6 +92,7 @@ package_manjaro-gstreamer() {
 
 package_manjaro-input() {
   pkgdesc="Manjaro meta package for complete input support"
+  url="https://wiki.archlinux.org/title/Xorg#Input_devices"
   depends=('xf86-input-elographics'
            'xf86-input-evdev'
            'xf86-input-libinput'
@@ -97,6 +104,7 @@ optdepends=('gestures: Gtk+ GUI for touchpad gestures'
 
 package_manjaro-modem() {
   pkgdesc="Manjaro meta package for complete modem support"
+  url="https://wiki.archlinux.org/title/Mobile_broadband_modem"
   depends=('modemmanager'
            'mobile-broadband-provider-info'
            'usb_modeswitch')
@@ -106,19 +114,23 @@ package_manjaro-modem() {
 
 package_manjaro-pipewire() {
   pkgdesc="Manjaro meta package for complete PipeWire support."
+  url="https://wiki.archlinux.org/title/PipeWire"
   depends=('gst-plugin-pipewire'
            'pipewire'
            'pipewire-alsa'
            'pipewire-pulse'
-           'pipewire-session-manager'
-           'pipewire-zeroconf')
+           'pipewire-session-manager')
   optdepends=('easyeffects: advanced equalizer and effects'
               'pipewire-jack: Jack support'
               'pipewire-v4l2: V4L2 interceptor'
               'pipewire-x11-bell: X11 bell'
-              'realtime-privileges: Realtime privileges for users'
-              'sof-firmware')
+              'pipewire-zeroconf: Zeroconf support'
+              'realtime-privileges: Realtime privileges for users')
   conflicts=('manjaro-pulse'
+             'pulseaudio-equalizer'
+             'pulseaudio-jack'
+             'pulseaudio-lirc'
+             'pulseaudio-rtp'
              'pulseaudio-zeroconf')
 
   install -Dm644 realtime-privileges.hook -t "$pkgdir"/usr/share/libalpm/hooks/
@@ -127,10 +139,10 @@ package_manjaro-pipewire() {
 
 package_manjaro-pulse() {
   pkgdesc="Manjaro meta package for complete PulseAudio support"
+  url="https://wiki.archlinux.org/title/PulseAudio"
   depends=('pulseaudio'
            'pulseaudio-alsa'
-           'pulseaudio-bluetooth'
-           'pulseaudio-zeroconf')
+           'pulseaudio-bluetooth')
   optdepends=('paprefs: Configuration dialog'
               'pasystray: system tray application'
               'pavucontrol: A GTK volume control tool'
@@ -141,8 +153,11 @@ package_manjaro-pulse() {
               'pulseaudio-jack: Jack support'
               'pulseaudio-lirc: IR (lirc) support'
               'pulseaudio-rtp: RTP and RAOP support'
-              'sof-firmware')
+              'pulseaudio-zeroconf: Zeroconf support')
   conflicts=('manjaro-pipewire'
+             'pipewire-jack'
              'pipewire-pulse'
+             'pipewire-v4l2'
+             'pipewire-x11-bell'
              'pipewire-zeroconf')
 }
