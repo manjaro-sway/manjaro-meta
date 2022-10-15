@@ -12,7 +12,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20221002
+pkgver=20221015
 pkgrel=1
 arch=('any')
 license=('GPL')
@@ -127,6 +127,7 @@ package_manjaro-pipewire() {
               'pipewire-zeroconf: Zeroconf support'
               'realtime-privileges: Realtime privileges for users')
   conflicts=('manjaro-pulse'
+             'pulseaudio-alsa'
              'pulseaudio-equalizer'
              'pulseaudio-jack'
              'pulseaudio-lirc'
@@ -155,6 +156,7 @@ package_manjaro-pulse() {
               'pulseaudio-rtp: RTP and RAOP support'
               'pulseaudio-zeroconf: Zeroconf support')
   conflicts=('manjaro-pipewire'
+             'pipewire-alsa'
              'pipewire-jack'
              'pipewire-pulse'
              'pipewire-v4l2'
