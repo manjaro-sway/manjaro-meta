@@ -12,8 +12,8 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20221015
-pkgrel=2
+pkgver=20221206
+pkgrel=1
 arch=('any')
 license=('GPL')
 source=('realtime-privileges.sh'
@@ -62,7 +62,6 @@ package_manjaro-connman() {
            'connman'
            'dnsmasq'
            'nss-mdns'
-           'ofono'
            'openconnect'
            'openresolv'
            'openssh'
