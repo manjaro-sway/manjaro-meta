@@ -117,8 +117,7 @@ package_manjaro-pipewire() {
   depends=('gst-plugin-pipewire'
            'pipewire'
            'pipewire-alsa'
-           'pipewire-pulse'
-           'wireplumber')
+           'pipewire-pulse')
   optdepends=('easyeffects: advanced equalizer and effects'
               'pipewire-jack: Jack support'
               'pipewire-v4l2: V4L2 interceptor'
