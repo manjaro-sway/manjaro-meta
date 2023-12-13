@@ -12,7 +12,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20231009
+pkgver=20231213
 pkgrel=1
 arch=('any')
 license=('GPL')
@@ -63,7 +63,7 @@ package_manjaro-connman() {
            'dnsmasq'
            'nss-mdns'
            'openconnect'
-           'openresolv'
+           'resolvconf'
            'openssh'
            'openvpn'
            'ntp'
@@ -72,10 +72,9 @@ package_manjaro-connman() {
            'rp-pppoe'
            'wpa_supplicant')
   optdepends=('cmst: A Qt GUI for connman'
-              'connman-gtk: A GTK GUI for connman'
+#              'connman-gtk: A GTK GUI for connman'  # AUR
               'gufw: Uncomplicated firewall GTK GUI'
-              'manjaro-settings-samba: Preconfigured samba settings'
-              'nx-firewall: kcm module for firewall')
+              'manjaro-settings-samba: Preconfigured samba settings')
 }
 
 package_manjaro-gstreamer() {
