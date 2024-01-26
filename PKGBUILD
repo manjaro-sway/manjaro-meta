@@ -1,7 +1,9 @@
 # Maintainer: Stefano Capitani <stefano@manjaro.org>
 # Maintainer: Philip Müller <philm@manjaro.org>
-# Maintainer: Roland Singer <roland@manjaro.org>
+# Maintainer: Mark Wagie <mark at manjaro dot org>
+# Contributor: Roland Singer
 # Contributor: Shrinivas Kumbhar (aka Librewish)
+
 pkgname=('manjaro-alsa'
          'manjaro-bluetooth'
          'manjaro-connman'
@@ -15,7 +17,7 @@ pkgbase=manjaro-meta
 pkgver=20231213
 pkgrel=1
 arch=('any')
-license=('GPL')
+license=('GPL-3.0-or-later')
 source=('realtime-privileges.sh'
         'realtime-privileges.hook')
 sha256sums=('de4521b2e801bb5ba53bddfaa5e62a8ebd3c7ff8247a1269f9f3b0e9821e6a46'
