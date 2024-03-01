@@ -1,4 +1,4 @@
 _extends: manjaro-contrib/.github
 repository:
   homepage: https://gitlab.manjaro.org/packages/extra/manjaro-meta.git
-  topics: arch, package, any
+
