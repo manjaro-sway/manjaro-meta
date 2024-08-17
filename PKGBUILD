@@ -14,7 +14,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20240312
+pkgver=20240817
 pkgrel=1
 arch=('any')
 license=('GPL-3.0-or-later')
@@ -146,7 +146,6 @@ package_manjaro-pulse() {
               'pasystray: system tray application'
               'pavucontrol: A GTK volume control tool'
               'pavucontrol-qt: A Qt volume control tool'
-              'pulseaudio-ctl: Control volume from the shell or mapped to keyboard shortcuts'
               'pulseaudio-equalizer: Graphical equalizer'
               'pulseaudio-equalizer-ladspa: A 15-band equalizer'
               'pulseaudio-jack: Jack support'
