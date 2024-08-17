@@ -14,7 +14,7 @@ pkgname=('manjaro-alsa'
          'manjaro-pulse'
          )
 pkgbase=manjaro-meta
-pkgver=20231213
+pkgver=20240817
 pkgrel=1
 arch=('any')
 license=('GPL-3.0-or-later')
@@ -106,10 +106,10 @@ package_manjaro-modem() {
   pkgdesc="Manjaro meta package for complete modem support"
   url="https://wiki.archlinux.org/title/Mobile_broadband_modem"
   depends=('modemmanager'
-           'mobile-broadband-provider-info'
            'usb_modeswitch')
   optdepends=('gpsd: GPS daemon and library to support USB/serial GPS devices'
-              'modem-manager-gui: A gui for modem manager')
+              'modem-manager-gui: Frontend for ModemManager'
+              'ppp: configure 3g connections')
 }
 
 package_manjaro-pipewire() {
@@ -146,7 +146,6 @@ package_manjaro-pulse() {
               'pasystray: system tray application'
               'pavucontrol: A GTK volume control tool'
               'pavucontrol-qt: A Qt volume control tool'
-              'pulseaudio-ctl: Control volume from the shell or mapped to keyboard shortcuts'
               'pulseaudio-equalizer: Graphical equalizer'
               'pulseaudio-equalizer-ladspa: A 15-band equalizer'
               'pulseaudio-jack: Jack support'
