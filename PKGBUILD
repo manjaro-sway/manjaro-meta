@@ -15,7 +15,7 @@ pkgname=(
   'manjaro-pulse'
 )
 pkgbase=manjaro-meta
-pkgver=20251009
+pkgver=20251226
 pkgrel=1
 arch=('any')
 license=('GPL-3.0-or-later')
@@ -58,7 +58,6 @@ package_manjaro-bluetooth() {
     'bluez-utils'
   )
   optdepends=(
-    'blueberry: Bluetooth configuration tool'
     'bluedevil: Qt Bluetooth frontend'
     'blueman: A Gtk+ Bluetooth manager'
     'pipewire-pulse: PipeWire support'
