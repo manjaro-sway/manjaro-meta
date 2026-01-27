@@ -15,7 +15,7 @@ pkgname=(
   'manjaro-pulse'
 )
 pkgbase=manjaro-meta
-pkgver=20251226
+pkgver=20260127
 pkgrel=1
 arch=('any')
 license=('GPL-3.0-or-later')
@@ -72,7 +72,6 @@ package_manjaro-connman() {
     'avahi'
     'connman'
     'dnsmasq'
-    'nss-mdns'
     'openconnect'
     'resolvconf'
     'openssh'
